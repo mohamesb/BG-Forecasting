@@ -5,3 +5,4 @@ scikit-learn>=1.2.0
 tensorflow>=2.12.0
 scipy>=1.10.0
 error-grids
+shap
