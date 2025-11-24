@@ -8,3 +8,4 @@ error-grids
 shap
 collections
 glupredkit
+optuna
