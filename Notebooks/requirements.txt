@@ -9,3 +9,4 @@ shap
 collections
 glupredkit
 optuna
+optuna-integration[tfkeras]
