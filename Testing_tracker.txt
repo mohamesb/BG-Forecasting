@@ -1,0 +1,109 @@
+=== Per-horizon RMSE / MAE for each model ===
+
+Model: persistence
+Horizon (min): [5, 10, 15, 20, 25, 30]
+RMSE (mg/dL):  [4.79, 9.42, 13.75, 17.73, 21.35, 24.64]
+MAE  (mg/dL):  [3.32, 6.53, 9.56, 12.37, 14.95, 17.34]
+
+Model: bergman
+Horizon (min): [5, 10, 15, 20, 25, 30]
+RMSE (mg/dL):  [4.8, 9.39, 13.65, 17.52, 21.01, 24.15]
+MAE  (mg/dL):  [3.37, 6.61, 9.63, 12.41, 14.94, 17.24]
+
+Model: lstm
+Horizon (min): [5, 10, 15, 20, 25, 30]
+RMSE (mg/dL):  [2.89, 3.55, 6.03, 9.45, 13.45, 17.35]
+MAE  (mg/dL):  [2.58, 2.89, 4.4, 6.53, 9.27, 12.06]
+
+Model: ml_corrector
+Horizon (min): [5, 10, 15, 20, 25, 30]
+RMSE (mg/dL):  [3.57, 7.08, 10.89, 15.23, 18.5, 21.91]
+MAE  (mg/dL):  [2.46, 4.88, 7.48, 10.68, 12.95, 15.55]
+
+Model: pinn
+Horizon (min): [5, 10, 15, 20, 25, 30]
+RMSE (mg/dL):  [16.55, 18.27, 20.44, 22.76, 25.23, 27.46]
+MAE  (mg/dL):  [13.26, 14.33, 15.73, 17.25, 18.94, 20.48]
+
+=== Final-step aggregated metrics (30 min) ===
+
+Model: persistence
+  windows: 48231
+  RMSE: 24.644  MAE: 17.336
+  Glucose-weighted RMSE: 25.586  Glucose-weighted MAE: 18.077
+  Temporal gain (min): 0   G-Mean: 0.7296
+
+Model: bergman
+  windows: 48231
+  RMSE: 24.146  MAE: 17.242
+  Glucose-weighted RMSE: 25.064  Glucose-weighted MAE: 17.867
+  Temporal gain (min): 30   G-Mean: 0.6645
+
+Model: lstm
+  windows: 48231
+  RMSE: 17.350  MAE: 12.056
+  Glucose-weighted RMSE: 17.341  Glucose-weighted MAE: 12.100
+  Temporal gain (min): 30   G-Mean: 0.8540
+
+Model: ml_corrector
+  windows: 48231
+  RMSE: 21.907  MAE: 15.552
+  Glucose-weighted RMSE: 22.346  Glucose-weighted MAE: 15.842
+  Temporal gain (min): 30   G-Mean: 0.6680
+
+Model: pinn
+  windows: 48231
+  RMSE: 27.463  MAE: 20.477
+  Glucose-weighted RMSE: 30.540  Glucose-weighted MAE: 23.088
+  Temporal gain (min): 30   G-Mean: 0.5026
+
+persistence Clarke zones:  {'A': (39013, 80.89), 'B': (9215, 19.11), 'D': (3, 0.01)}
+persistence Parkes zones :  {'A': (38822, 80.49), 'B': (6159, 12.77), 'C': (2641, 5.48), 'E': (606, 1.26), 'D': (3, 0.01)}
+
+bergman Clarke zones:  {'A': (39048, 80.96), 'B': (9181, 19.04), 'D': (2, 0.0)}
+bergman Parkes zones :  {'A': (38838, 80.52), 'B': (6234, 12.93), 'C': (2501, 5.19), 'E': (656, 1.36), 'D': (2, 0.0)}
+
+lstm Clarke zones:  {'A': (43149, 89.46), 'B': (5080, 10.53), 'C': (1, 0.0), 'D': (1, 0.0)}
+lstm Parkes zones :  {'A': (43014, 89.18), 'C': (1275, 2.64), 'B': (3766, 7.81), 'E': (174, 0.36), 'D': (2, 0.0)}
+
+ml_corrector Clarke zones:  {'A': (40503, 83.98), 'B': (7725, 16.02), 'C': (2, 0.0), 'D': (1, 0.0)}
+ml_corrector Parkes zones :  {'A': (40188, 83.32), 'B': (5458, 11.32), 'C': (2038, 4.23), 'E': (544, 1.13), 'D': (3, 0.01)}
+
+pinn Clarke zones:  {'A': (37854, 78.48), 'B': (10377, 21.52)}
+pinn Parkes zones :  {'A': (37662, 78.09), 'B': (7286, 15.11), 'C': (2561, 5.31), 'E': (722, 1.5)}
+
+
+Test 0.2:
+=== Final-step aggregated metrics (30 min) ===
+
+Model: persistence
+  windows: 48231
+  RMSE: 24.644  MAE: 17.336
+  Glucose-weighted RMSE: 25.586  Glucose-weighted MAE: 18.077
+  Temporal gain (min): 0   G-Mean: 0.7296
+
+Model: bergman
+  windows: 48231
+  RMSE: 24.146  MAE: 17.242
+  Glucose-weighted RMSE: 25.064  Glucose-weighted MAE: 17.867
+  Temporal gain (min): 30   G-Mean: 0.6645
+
+Model: lstm
+  windows: 48231
+  RMSE: 17.629  MAE: 12.275
+  Glucose-weighted RMSE: 17.937  Glucose-weighted MAE: 12.601
+  Temporal gain (min): 30   G-Mean: 0.8691
+
+Model: ml_corrector
+  windows: 48231
+  RMSE: 21.532  MAE: 15.220
+  Glucose-weighted RMSE: 21.981  Glucose-weighted MAE: 15.550
+  Temporal gain (min): 30   G-Mean: 0.7176
+
+Model: pinn
+  windows: 48231
+  RMSE: 26.300  MAE: 19.885
+  Glucose-weighted RMSE: 28.475  Glucose-weighted MAE: 21.760
+  Temporal gain (min): 30   G-Mean: 0.5492
+
+
